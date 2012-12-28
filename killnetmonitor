@@ -1,0 +1,7 @@
+#!/bin/bash
+source /usr/netmonitor/netmonitor.exports
+if ! [ -z $NETMONITOR_PID_FILE ]; then
+    if [ -s $NETMONITOR_PID_FILE ]; then
+        kill `cat $NETMONITOR_PID_FILE` &> /dev/null || (echo No netmonitor started. None stopped && exit 1)
+    fi
+fi

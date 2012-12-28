@@ -1,0 +1,5 @@
+export NETMONITOR_PID_FILE=/usr/netmonitor/netmonitor.pid
+export NETMONITOR_TRAFFIC_FILE=/usr/netmonitor/traffic
+export NETMONITOR_LOG_FILE=/usr/netmonitor/log
+export TRAFFIC_LIMIT=$((75*1048576))
+export delay=1

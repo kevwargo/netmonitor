@@ -1,0 +1,6 @@
+#!/bin/bash
+source /usr/netmonitor/netmonitor.exports
+if [[ $0 = *"netmonitor" ]]; then
+    netmonitor-daemon & #&& echo "netmonitor-daemon works" || echo "netmonitor-daemon failes"
+    echo $! > $NETMONITOR_PID_FILE
+fi #>> $NETMONITOR_LOG_FILE
